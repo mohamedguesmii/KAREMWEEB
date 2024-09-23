@@ -4,7 +4,7 @@ import BannerElement from "@/components/BannerElement";
 
 import ImageBanner2 from "@/components/ImageBanner2";
 
-import image11 from "../../../public/images/Image11.png";
+import image11 from "../../../public/images/image11.png";
 
 import karemTourism42 from "../../../public/images/karemTourism42.png";
 import wizara from "../../../public/images/wizara.png";
