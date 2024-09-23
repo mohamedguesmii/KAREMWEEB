@@ -1,26 +1,11 @@
 import React from "react";
 import Image from "next/image";
-
-import Mecca from "../../../public/images/makka4.png";
 import BannerElement from "@/components/BannerElement";
-import { AiOutlineSearch } from "react-icons/ai";
-import IconComponent from "@/components/IconComponent";
-import IkamaImg from "../../../public/images/ikama.png";
-import PlaneImg from "../../../public/images/avion.png";
-import BayanatImg from "../../../public/images/bayanat.png";
-import ImageBanner from "@/components/ImageBanner";
+
 import ImageBanner2 from "@/components/ImageBanner2";
-import TextBanner from "@/components/TextBanner";
-import TextBannerr from "@/components/TextBannerr";
-import image9 from "../../../public/images/Image9.png";
-import image10 from "../../../public/images/Image10.png";
-import image8 from "../../../public/images/Image8.png";
-import image12 from "../../../public/images/Image12.png";
+
 import image11 from "../../../public/images/Image11.png";
-import image7 from "../../../public/images/Image7.png";
-import { faKaaba, faMosque } from "@fortawesome/free-solid-svg-icons";
-import ImageBanner3 from "@/components/ImagerBanner3";
-import Logo from "../../../public/images/karemTourism4.png";
+
 import karemTourism42 from "../../../public/images/karemTourism42.png";
 import wizara from "../../../public/images/wizara.png";
 import markez from "../../../public/images/markez.png";
