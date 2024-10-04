@@ -35,22 +35,22 @@ const NavBar = ({ color }) => {
   return (
     <div className="w-screen h-full p-10 items-center" style={{ color: color }}>
       <div className="w-full flex flex-row items-center justify-evenly">
-        <Image src={Logo} className="w-[200px] h-[200px]" alt="Logo" />
+        <Image src={Logo} className="w-[130px] h-[130px]" alt="Logo" />
         <ul>
           <div className="flex gap-[100px] flex-row text-center">
             {links.map((link) => (
-              <Link key={link.id} href={link.url} className="font-bold">
+              <Link key={link.id} href={link.url} className="font-bold text-white ">
                 {link.title}
               </Link>
             ))}
             <div>
-              <Link href="/" className="font-bold">
+              <Link href="/" className="font-bold text-white " >
                 عربي
               </Link>
             </div>
             <Link href="/">
-            <div className="flex items-center w-[160px] h-10 text-center rounded-3xl mr-20" style={{ backgroundColor: '#d2b48c' }}>
-               <p className="mx-auto">تسجيل الدخول</p>
+            <div className="flex items-center w-[130px] h-10 text-center rounded-2xl mr-10" style={{ backgroundColor: '#d2b48c' }}>
+               <p className="mx-auto text-white ">تسجيل الدخول</p>
           </div>
 
             </Link>

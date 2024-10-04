@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import Mecca from "../../../public/images/makka4.png";
+import Mecca from "../../../public/images/mecca.png";
 import BannerElement from "@/components/BannerElement";
 import { AiOutlineSearch } from "react-icons/ai";
 import IconComponent from "@/components/IconComponent";
@@ -18,13 +18,15 @@ import image8 from "../../../public/images/image8.png";
 import image12 from "../../../public/images/image12.png";
 import image11 from "../../../public/images/image11.png";
 import image7 from "../../../public/images/image7.png";
-import { faKaaba, faMosque } from "@fortawesome/free-solid-svg-icons";
+import { faKaaba, faMosque,faTree } from "@fortawesome/free-solid-svg-icons";
 import ImageBanner3 from "@/components/ImagerBanner3";
 import karemTourism42 from "../../../public/images/karemTourism42.png";
+import karemTourism4 from "../../../public/images/karemTourism4.png";
+
 import wizara from "../../../public/images/wizara.png";
 import markez from "../../../public/images/markez.png";
 import tijara from "../../../public/images/tijara.png";
-import { IoLogoTwitter, IoLogoInstagram,  IoLogoSnapchat } from 'react-icons/io';
+import { IoLogoTwitter, IoLogoInstagram,  IoLogoSnapchat, IoLogoYoutube, IoLogoFacebook } from 'react-icons/io';
 
 import pay from "../../../public/images/pay.png";
 import stcpay from "../../../public/images/stcpay.png";
@@ -45,11 +47,12 @@ const HomePage = () => {
     switch (iconName) {
       case 'twitter':
         return <IoLogoTwitter />;
-      
       case 'instagram':
         return <IoLogoInstagram />;
       case 'youtube':
-        return <IoLogoSnapchat />;
+        return <IoLogoYoutube />;
+        case 'facebook':
+          return <IoLogoFacebook />;
       default:
         return null;
     }
@@ -66,20 +69,24 @@ const HomePage = () => {
   };
 
   return (
-    <div className="w-full h-screen ">
-      <div className="w-full h-[75%]  ">
-        <Image
-          className="z-[-10]"
-          src={Mecca}
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
-      <div className="w-full   flex absolute top-[50px] z-[-10] justify-center">
-        <div className="w-full h-[450px] flex flex-col justify-center items-center">
+  
+      <div className="w-[full] h-[400px]   ">
+      <div className="w-[full] h-[390px]  ">
+
+  <Image
+    className="z-[-60] object-top"
+    src={Mecca}
+    layout="fill"
+    objectFit="top"
+  />
+</div>
+
+
+      <div className="w-full   flex absolute top-[150px] z-[-20] justify-center">
+        <div className="w-full h-[400px] flex flex-col justify-center items-center">
         <h3 className="text-[4rem] font-bold font-avenir" style={{ color: '#d2b48c' }}>
-  كارم السياحية
-</h3>
+         كارم السياحية
+        </h3>
 
           <h2 className=" m-5 font-bold text-white text-[1rem] font-avenir ">
             بوابتك إلى تجربة مميزة في البقاع المقدسة
@@ -185,133 +192,189 @@ const HomePage = () => {
           />
         </div>
         <div className="flex flex-wrap gap-4 justify-center">
-          <div className="flex-1 w-[1000px]">
+          <div className="flex-1 w-[400px]">
             <TextBanner className="self-center" />
           </div>
-          <div className="flex-1 min-w-[1000px] max-w-[750px]">
+          <div className="flex-1 min-w-[700px] max-w-[750px]">
             <ImageBanner
               title="مكة المكرمة"
               description="إكتشف أفضل العروض"
               route="/Hotels"
               image={image9}
               icon={faKaaba}
+              clipPath="polygon(79% 0, 100% 0, 100% 100%, 65% 100%)" // First polygon
+
+              
             />
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-2 justify-center">
-          <div className="flex-1 min-w-[700px] max-w-[750px]">
-            <ImageBanner
+        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex-1 min-w-[600px] max-w-[750px]">
+        <ImageBanner
               title=" المدينة المنورة"
               description="إكتشف أفضل العروض"
               route="/Hotels"
               image={image10}
               icon={faMosque}
+              clipPath="polygon(79% 0, 100% 0, 100% 100%, 70% 100%) " // First polygon
+              color="rgba(73, 15, 106, 0.85)" // Darker violet with slight transparency
+
+           
+
             />
           </div>
-          <div className="flex-1 min-w-[300px] max-w-[100px]">
+          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex-1 min-w-[350px] max-w-[100px]">
             <ImageBanner
               title=" جدة"
               description="إكتشف أفضل العروض"
               route="/Hotels"
               image={image8}
-              icon={faKaaba}
+              icon={faTree}
+              clipPath="polygon(70% 0, 100% 0, 100% 100%, 40% 100%)" // First polygon
+              color="rgba(222, 198, 161, 0.9)" // Beige transparent à 80%
+
+
             />
           </div>
 
 
-          <div className="flex-1 min-w-[300px] max-w-[100px] ">
-         
-            <ImageBanner2
-              description="  مكة كلوك رويال تاور فيرمونت فندق"
-              route="/fondok"
-              image={image11}
-              
-            />
+
+
           </div>
 
-          <div className="flex-1 min-w-[300px] max-w-[100px]">
-            <ImageBanner2
-              description=" دار توحيد انتركونتينونتال مكة "
-              route="/Hotels"
-              image={image12}
-            />
-          </div>
-          <div className="flex-10 w-[600px]">
-            <TextBannerr className="self-center" />
-          </div>
-
-              <div className="flex-1 min-w-[1500px] max-w-[1000px]">
-              
-
-
-            <ImageBanner3 
           
+          <div className="flex flex-wrap gap-4 justify-end">
+          <div className="flex-1 min-w-[350px] max-w-[100px] ">
+         <ImageBanner2
+           description="  مكة كلوك رويال تاور فيرمونت فندق"
+           route="/fondok"
+           image={image11} 
+         />
+       </div>
+       <div className="flex flex-wrap gap-4 justify-end">
+       <div className="flex-1 min-w-[350px] max-w-[100px] ">
+         <ImageBanner2
+           description=" دار توحيد انتركونتينونتال مكة "
+           route="/Hotels"
+           image={image12}
+         />
+         
+       </div>
+       </div>
+       </div>
+
+
+
+
+
+          <div className="flex flex-wrap gap-4 justify-start">
+          <div className="flex-8 w-[380px]">
+            <TextBannerr className="self-left-10" />
+          </div>
+          </div>
+
+
+
+
+          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex-1 min-w-[1200px] max-w-[600px]">   
+            <ImageBanner3 
               description="    إكتشف الإقامة المثالية في وجهاتنا الفريدة "
               description1="  فنادقنا ترحب بك في قلب المدينة وروح التاريخ "
               route="/Hotels"
               image={image7}       
+              smallImage={karemTourism4}
               
             />
+            </div>
+            
+            </div>
 
 
-        
-          </div>
-          
-          
-          <h3 className="text-black text-[1.25rem] font-bold font-avenir ml-100">
-            إشترك بالنيوزلاتر وتلقى أخر اخبارنا
-          </h3>
+            <div className="w-full bg-white flex justify-between items-center m-5"> {/* Conteneur flex avec justification à l'espace entre */}
+    <h3 className="text-black text-[2rem] font-bold text-center mr-5"> {/* Texte à gauche */}
+        <span className="text-black">إشترك بالنيوزلاتر وتلقى أخر اخبارنا</span>
+    </h3>
+    <div className="flex items-center"> {/* Conteneur flex pour la barre de recherche et le bouton */}
+        <input
+            type="text"
+            placeholder="أدخل بريدك الإلكتروني..."
+            className="border border-gray-300 rounded-l-md p-1 focus:outline-none"
+        />
+        <button className="bg-purple-900 text-white rounded-full p-1 flex items-center ml-1"> {/* Bouton arrondi */}
+        إشترك
 
-
-
-
-          <div className="flex justify-between items-center m-5">
-  <h3 className="text-black text-[0.75rem] font-bold">
-    <span className="text-purple-800">شركة سعودية مرخصة ومعتمدة</span>
-  </h3>
-
-  <h3 className="text-black text-[1rem] font-bold">
-    <span className="text-purple-800">تواصل معنا</span>
-  </h3>
+            <span className="mr-1 text-white">⬅</span> {/* Flèche à gauche en blanc */}
+        </button>
+    </div>
 </div>
 
-          <div className="w-full flex items-center justify-between mt-4">
 
+
+
+
+
+
+
+
+
+  
+
+  
             
-            
-  {/* Conteneur des images */}
-  <div className="w-full flex justify-center">
-    
+  <div className="flex justify-between items-center w-full">
+
+         
+
+  {/* Image à gauche */}
+  <div className="flex justify-between ml-10"> {/* Marge à gauche du conteneur */}
   <Image src={karemTourism42} className="w-[150px] h-[150px]" alt="karemTourism42" />
-  </div>
+</div>
 
 
-  <div className="flex flex-row space-x-4">
-
-    
-    
+  {/* Images au centre */}
+  <div className="flex flex-col items-center"> {/* Conteneur pour aligner les éléments au centre */}
+  <h3 className="text-black text-[1.25rem] mb-3">
+    <span className="text-purple-900">شركة سعودية مرخصة ومعتمدة</span>
+  </h3>
+  
+  <div className="flex space-x-4"> {/* Conteneur pour les images avec espacement */}
     <Image src={wizara} className="w-[100px] h-[100px]" alt="wizara" />
     <Image src={markez} className="w-[100px] h-[100px]" alt="markez" />
     <Image src={tijara} className="w-[100px] h-[100px]" alt="tijara" />
-
-
-    <MediaIcon iconName="instagram" url="https://www.instagram.com/" />
-    <MediaIcon iconName="twitter" url="https://x.com/" />
-    <MediaIcon iconName="youtube" url="https://www.youtube.com/" />
   </div>
+</div>
+
+  {/* Icônes à droite */}
+ 
+
+  <div className="flex flex-col items-start ml-8"> {/* Augmentez la marge à gauche pour décaler à droite */}
+  <h3 className="text-black text-[1.25rem] font-bold mt-4"> {/* Espace au-dessus du texte */}
+    <span className="text-purple-900">تواصل معنا</span>
+  </h3>
+  
+  <div className="flex justify-start space-x-2 mt-2"> {/* Conteneur pour les icônes */}
+    <MediaIcon iconName="instagram" url="https://www.instagram.com/" />
+    <MediaIcon iconName="youtube" url="https://www.youtube.com/" />
+    <MediaIcon iconName="twitter" url="https://www.twitter.com/" />
+    <MediaIcon iconName="facebook" url="https://www.facebook.com/" />
+  </div>
+</div>
+
+
+
 
   
 </div>
 <div className="text-center m-5">
-  <h3 className="text-black text-[0.5rem] font-bold flex justify-center items-center m-5">
-    <span className="text-gray-500">الرقم الضريبي: 311889896400003</span>
+<h3 className="text-black text-[0.5rem] font-center mt-6"> {/* Espace au-dessus du texte */}
+<span className="text-gray-400">الرقم الضريبي: 311889896400003</span>
   </h3>
 
-  <div className="flex justify-center space-x-4 mt-3 text-[0.75rem] whitespace-nowrap">
-  <span className="text-black cursor-pointer flex items-center space-x-1">
-    <span  className="text-black after:content-['|'] after:mx-2" >عربية</span>
-  </span> 
+  <div className="flex justify-center space-x-20 mt-3 text-[0.75rem] whitespace-nowrap">
+  <span className="text-black after:content-['|'] after:mx-2" >عربي</span>
   <span className="text-black after:content-['|'] after:mx-2"> الخصوصية</span>
   <span className="text-black after:content-['|'] after:mx-2">الشروط والأحكام</span>
   <span className="text-black after:content-['|'] after:mx-2">تقييم </span>
@@ -331,25 +394,23 @@ const HomePage = () => {
 
 </div>
 </div>
+<div className="flex flex-col items-center mt-6"> {/* Conteneur pour aligner les éléments au centre */}
 
-<div className="flex flex-row space-x-4">
 
-    
-    
+  <div className="flex flex-row space-x-10 mb-4"> {/* Espace en bas du conteneur des images */}
     <Image src={stcpay} className="w-[50px] h-[50px]" alt="stcpay" />
     <Image src={mada} className="w-[50px] h-[50px]" alt="mada" />
     <Image src={master} className="w-[50px] h-[50px]" alt="master" />
     <Image src={visa} className="w-[50px] h-[50px]" alt="visa" />
     <Image src={pay} className="w-[50px] h-[50px]" alt="pay" />
-
-
-
-    
   </div>
 
-  <h3 className="text-black text-[0.5rem] font-bold">
-    <span className="text-gray-400">   Copyright © 2024 KAREM TOURISM</span>
+  <h3 className="text-black text-[0.5rem] font-bold mt-4"> {/* Espace au-dessus du texte */}
+    <span className="text-gray-400">Copyright © 2024 KAREM TOURISM</span>
   </h3>
+
+</div>
+
 
 
 
